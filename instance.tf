@@ -3,7 +3,9 @@ resource "vultr_instance" "collins" {
   region      = var.vultr_instance_region
   os_id       = var.vultr_os_id
   hostname    = "collins"
-  ssh_key_ids = [vultr_ssh_key.collinsmuriuki.id]
+	# TODO: Manually add on vultr as ssh_key_ids on terraform are only valid for Linux/FreeBSD and not Debian 10
+	#       https://registry.terraform.io/providers/vultr/vultr/latest/docs/resources/instance
+  # ssh_key_ids = [vultr_ssh_key.collinsmuriuki.id] 
 }
 
 resource "vultr_ssh_key" "collinsmuriuki" {
