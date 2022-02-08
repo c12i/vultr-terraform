@@ -1,5 +1,5 @@
-# vultr vps terraform
-My vps iaac
+# vultr terraform
+My vps iaac for my vps (for now)
 
 ## Usage
 API and SSH keys are currently stored in `dev.auto.tfvars` (gitignored). Accessible from the vultr console.
