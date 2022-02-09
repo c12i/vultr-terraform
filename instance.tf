@@ -13,13 +13,13 @@ resource "vultr_ssh_key" "collinsmuriuki" {
 }
 
 resource "vultr_startup_script" "init" {
-  name   = "init"
+  name = "init"
   script = base64encode(<<EOF
-		#!/bin/sh
+#!/bin/sh
 
-		apt upgrade
-		apt install nginx python-certbot-nginx rsync
-		nginx
-		EOF
-	)
+apt upgrade
+apt install nginx python-certbot-nginx rsync
+nginx
+EOF
+  )
 }
