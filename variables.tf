@@ -34,3 +34,8 @@ variable "vultr_ssh_key" {
   default = ""
   type    = string
 }
+
+variable "base64encoded_script" {
+  default = ""
+  type    = string
+}
